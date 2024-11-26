@@ -1,0 +1,33 @@
+@import "../scss/variables.scss";
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    position: absolute;
+    top: 10%;
+
+    .search-input {
+        flex: 1;
+        border-radius: 50vw;
+        outline: none;
+        border: 0.1rem solid #4bafd1;
+        opacity: 0.6;
+        padding: 4%;
+
+        @media (min-width: $breakpoint-tablet) {
+            padding: 3%;
+        }
+
+        @media (min-width: $breakpoint-tablet-large) {
+            padding: 2%;
+        }
+
+        &:focus {
+            border: 0.2rem solid #4bafd1;
+            opacity: 0.6;
+            transition: border 0.1s ease, opacity 0.1s ease;
+        }
+    }
+}
