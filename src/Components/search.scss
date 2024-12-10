@@ -7,6 +7,10 @@
     width: 70%;
     margin-top: 10%;
 
+    @media (min-width: $breakpoint-tablet) {
+        margin-top: 3%;
+    }
+
     .search-input {
         flex: 1;
         border-radius: 50vw;
