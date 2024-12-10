@@ -4,7 +4,7 @@ import ImageAustralia from "../assets/image(2).jpg";
 import ImageIndonesia from "../assets/image(3).png";
 import ImageHawaii from "../assets/image(4).webp";
 
-function GalleryView() {
+function GalleryView({ style }) {
     const images = [ImageAustralia, ImageIndonesia, ImageHawaii];
     const bestCountries = ["Australia", "Indonesia", "Hawaii"];
 
@@ -25,7 +25,7 @@ function GalleryView() {
     })
 
     return (
-        <div className="images-container">
+        <div style={style} className="images-container">
             <div className="carousel">
                 <h1 className="country-title">{bestCountries[index]}</h1>
                 <img className="beach-image" src={images[index]} alt={'image of best beach'} />

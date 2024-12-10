@@ -1,20 +1,26 @@
 import { useState } from "react";
 import Button from "./Button";
-import "./search.scss"
+import "./search.scss";
+import GetWeather from "../assets/api/apiService";
 
-function SearchBar() {
+function SearchBar({ handleVisibility, setConditions }) {
 
     const [inputValue, setInputValue] = useState('');
+
+    const conditions = ["ploaie", "vant", "soare"];
 
     const handleChange = (event) => {
         setInputValue(event.target.value);
     }
 
-    const handleSearchClick = (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
+        setConditions(conditions);
+        // GetWeather();
+        handleVisibility();
     }
     return (
-        <form class="form-container">
+        <form className="form-container">
             <input
                 className="search-input"
                 type="text"
@@ -23,8 +29,8 @@ function SearchBar() {
                 placeholder="Search beaches..."
             />
             {inputValue && (
-                    <Button onClick={handleSearchClick} className="" />
-                )}
+                <Button onClick={handleSubmit} />
+            )}
         </form>
     )
 }
