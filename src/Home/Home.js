@@ -3,20 +3,29 @@ import "./home.scss";
 import SearchBar from "../Components/Search";
 import GalleryView from "../Components/Carousel";
 import ResultPage from "../ResultPage/ResultPage";
+import getWeather from "../assets/api/apiService";
 
 
 function HomePage() {
 
-    const [isVisible, setIsVisible] = useState(true);
+    const [isGalleryVisible, setIsGalleryVisible] = useState(true);
     const [conditions, setConditions] = useState([]);
+    const [isLoaded, setIsLoaded] = useState(false);
 
-    const handleVisibility = () => setIsVisible(false);
+    const handleSearch = () => {
+        setIsGalleryVisible(false);
+        const weatherData = ["monday", "joi"]
+        setConditions(weatherData);
+        setIsLoaded(true);
+    }
 
     return (
         <div className="home-page">
-            <SearchBar setConditions={setConditions} handleVisibility={handleVisibility} />
-            <GalleryView style={{ display: isVisible ? "block" : "none" }} />
-            <ResultPage conditions={conditions} />
+            <SearchBar onSearch={handleSearch} />
+            <GalleryView style={{ display: isGalleryVisible ? "block" : "none" }} />
+            {isLoaded &&
+                <ResultPage conditions={conditions} />
+            }
         </div>
     )
 }

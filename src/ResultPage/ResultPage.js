@@ -4,7 +4,7 @@ function ResultPage({ conditions }) {
     return (
         <div className="resultPage">
             {conditions.map((condition, i) => (
-                <div>
+                <div key={i}>
                     {condition}
                 </div>
             ))

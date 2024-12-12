@@ -1,10 +1,10 @@
 import "./button.scss";
 
-function Button({onClick}) {
+function Button() {
     return (
         <button className="default-btn"
             type="submit"
-            onClick={onClick}>
+        >
             Search
         </button>
     )
