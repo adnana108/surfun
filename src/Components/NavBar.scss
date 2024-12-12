@@ -1,5 +1,48 @@
-p{
-    color:white;
-    display: inline-block;
-    margin:10px;
+@import "../scss/variables.scss";
+
+.btn {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.nav-container {
+    color: $dark-sea-blue;
+
+    .nav-bar {
+        opacity: 0.6;
+        background-color: $white-line;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .menu-icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        .surf-fun-logo {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            font-size: large;
+        }
+
+        .btn-sign-in {
+            text-decoration: underline;
+        }
+    }
+
+    .nav-list {
+        display: inline-block;
+        list-style-type: none;
+        padding: 0;
+        opacity: 0.6;
+        background-color: $white-line;
+
+        li{
+            padding: 3%;
+        }
+    }
 }
