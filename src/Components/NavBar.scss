@@ -7,18 +7,25 @@
     cursor: pointer;
 }
 
-.nav-container {
-    color: $dark-sea-blue;
+.nav-bar {
+    position: relative;
+    background-color: $white-line;
+    display: flex;
 
-    .nav-bar {
-        background-color: $white-line;
+    .logos-container {
         display: flex;
-        justify-content: space-between;
         align-items: center;
 
-        .menu-icon {
-            width: 50px;
-            height: 50px;
+        .btn-menu-icon {
+
+            .menu-icon {
+                width: 50px;
+                height: 50px;
+
+                // @media (min-width: $breakpoint-tablet) {
+                //     display: none;
+                // }
+            }
         }
 
         .surf-fun-logo {
@@ -27,20 +34,22 @@
             transform: translate(-50%);
             font-size: large;
         }
-
-        .btn-sign-in {
-            text-decoration: underline;
-        }
     }
 
+
     .nav-list {
-        position: fixed;
+        background-color: $white-line;
+        position: absolute;
+        top: 100%;
         z-index: 10;
-        display: inline-block;
+        width: 80%;
         list-style-type: none;
         padding: 0;
-        width: 80%;
-        background-color: $white-line;
+
+        @media (min-width: $breakpoint-tablet) {
+            position: static;
+            top: 0;
+        }
 
         li {
             padding: 0.5rem;
@@ -56,6 +65,5 @@
                 margin: auto;
             }
         }
-
     }
 }

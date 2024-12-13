@@ -12,13 +12,13 @@ function HomePage() {
     const [conditions, setConditions] = useState([]);
     const [isLoaded, setIsLoaded] = useState(false);
 
-    const handleSearch = () => {
+    const handleSearch = async () => {
         setIsGalleryVisible(false);
-        const weatherData = ["monday", "joi"]
+        const weatherData = await getWeather();
         setConditions(weatherData);
         setIsLoaded(true);
     }
-
+    
     return (
         <div className="home-page">
             <SearchBar onSearch={handleSearch} />
