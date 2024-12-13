@@ -1,8 +1,10 @@
+@import "../scss/variables.scss";
+
 .default-btn {
     padding: 0.3rem 0.6rem;
     margin: 0.3rem;
-    background-color: white;
+    background-color: $pink;
     border-radius: 50vw;
-    opacity: 0.6;
-    border: 0.2rem solid #4bafd1;
+    opacity: 0.8;
+    border: 0.2rem solid $light-sea-blue;
 }
