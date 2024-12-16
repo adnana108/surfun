@@ -18,7 +18,7 @@ function HomePage() {
         setConditions(weatherData);
         setIsLoaded(true);
     }
-    
+
     return (
         <div className="home-page">
             <SearchBar onSearch={handleSearch} />
