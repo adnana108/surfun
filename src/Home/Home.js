@@ -5,16 +5,15 @@ import GalleryView from "../Components/Carousel";
 import ResultPage from "../ResultPage/ResultPage";
 import getWeather from "../assets/api/apiService";
 
-
 function HomePage() {
 
     const [isGalleryVisible, setIsGalleryVisible] = useState(true);
     const [conditions, setConditions] = useState([]);
     const [isLoaded, setIsLoaded] = useState(false);
 
-    const handleSearch = async () => {
+    const handleSearch = async (locationName) => {
+        const weatherData = await getWeather(locationName);
         setIsGalleryVisible(false);
-        const weatherData = await getWeather();
         setConditions(weatherData);
         setIsLoaded(true);
     }
