@@ -1,30 +1,25 @@
 import React, { useState } from "react";
 import "./home.scss";
-import SearchBar from "../Components/Search";
 import GalleryView from "../Components/Carousel";
-import ResultPage from "../ResultPage/ResultPage";
-import getWeather from "../assets/api/apiService";
+import TrialButton from "../Components/TrialButton";
+// import SearchBar from "../Components/Search";
+// import ResultPage from "../ResultPage/ResultPage";
+// import getWeather from "../assets/api/apiService";
 
 function HomePage() {
 
-    const [isGalleryVisible, setIsGalleryVisible] = useState(true);
-    const [conditions, setConditions] = useState([]);
-    const [isLoaded, setIsLoaded] = useState(false);
-
-    const handleSearch = async (locationName) => {
-        const weatherData = await getWeather(locationName);
-        setIsGalleryVisible(false);
-        setConditions(weatherData);
-        setIsLoaded(true);
-    }
-
     return (
         <div className="home-page">
-            <SearchBar onSearch={handleSearch} />
-            <GalleryView style={{ display: isGalleryVisible ? "block" : "none" }} />
-            {isLoaded &&
-                <ResultPage conditions={conditions} />
-            }
+            <GalleryView />
+            <p className="surf-quote">
+                Surf safe
+            </p>
+            <p className="surf-quote">
+                progress fast
+            </p>
+            <p className="surf-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna
+            </p>
+            <TrialButton />
         </div>
     )
 }

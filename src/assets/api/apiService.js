@@ -17,8 +17,7 @@ const getWeather = async (locationName) => {
         const lat = (location[0].lat).toFixed(4);
         const lng = (location[0].lon).toFixed(4);
         const weatherData = await fetchWeatherData(lat, lng);
-        console.log(weatherData);
-        
+
         return weatherData;
 
     } catch {
@@ -29,6 +28,7 @@ const getWeather = async (locationName) => {
 
 const fetchLocationData = async (cityName) => {
     try {
+        console.log(cityName);
         const response = await fetch(`${API_URL_LOCATION}?q=${cityName}&appid=${API_LOCATION_KEY}`);
         return response.json();
     } catch {

@@ -1,9 +1,11 @@
 @import "../scss/variables.scss";
 
+// TO DOl: imaginile nu sunt egale
+
 .country-title {
     text-align: center;
     color: $dark-sea-blue;
-    background-color: $pink;
+    background-color: $sand;
 }
 
 .beach-image {
@@ -12,15 +14,13 @@
 }
 
 .images-container {
-    position: fixed;
-    bottom: 10%;
-    margin: 0 auto;
-    width: 80%;
+    margin: 20px auto;
+    width: 90%;
 
     .carousel {
         margin: 0 auto;
         overflow: hidden;
-        border-radius: 30px;
+        border-radius: 10px;
         opacity: 0.9;
 
         @media (min-width: $breakpoint-phone-large) {
@@ -40,7 +40,7 @@
             flex-direction: column;
             width: 80%;
             overflow: hidden;
-            border-radius: 30px;
+            border-radius: 10px;
             margin: 1%;
         }
     }

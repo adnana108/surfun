@@ -1,0 +1,12 @@
+@import "../scss/variables.scss";
+
+.btn-free-trial {
+    display: block;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    background-color: $sand;
+    color: $pink;
+    border-radius: 5px;
+    border: 0.2rem solid $sand;
+    margin: auto;
+}

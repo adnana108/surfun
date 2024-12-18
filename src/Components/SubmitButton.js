@@ -1,6 +1,6 @@
-import "./button.scss";
+import "./SubmitButton.scss";
 
-function Button() {
+const SubmitButton = () => {
     return (
         <button className="default-btn"
             type="submit"
@@ -10,4 +10,4 @@ function Button() {
     )
 }
 
-export default Button;
+export default SubmitButton;

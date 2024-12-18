@@ -1,6 +1,23 @@
-.home-page{
+@import "../scss/variables.scss";
+
+.home-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
+
+    .surf-quote {
+        font-size: x-large;
+    }
+
+    .surf-description {
+        margin-top: 2%;
+        text-align: center;
+        width: 70%;
+
+        @media (min-width: $breakpoint-tablet) {
+            margin-top: 5%;
+        }
+    }
+
 }

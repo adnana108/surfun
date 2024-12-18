@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Button from "./Button";
-import "./search.scss";
+import Button from "./SubmitButton";
+import "./Search.scss";
 
 function SearchBar({ onSearch }) {
 
