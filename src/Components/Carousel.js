@@ -30,7 +30,7 @@ function GalleryView({ style }) {
                 <h1 className="country-title">{bestCountries[index]}</h1>
                 <img className="beach-image" src={images[index]} alt={'image of best beach'} />
             </div>
-            <div className="images-gallery">
+            {/* <div className="images-gallery">
                 {images.map((image, i) => (
                     <section className="image-card" key={i}>
                         <h1 className="country-title">{bestCountries[i]}</h1>
@@ -38,7 +38,7 @@ function GalleryView({ style }) {
                     </section>
                 ))
                 }
-            </div>
+            </div> */}
         </div>
     )
 }

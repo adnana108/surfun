@@ -1,22 +1,36 @@
 @import "../scss/variables.scss";
 
 .home-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
+
+    .surf-intro-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        color: $pink;
+        width: 70%;
+        margin: auto;
+        border-radius: 1rem;
+
+        @media (min-width: $breakpoint-tablet) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
 
     .surf-quote {
         font-size: x-large;
     }
 
     .surf-description {
-        margin-top: 2%;
+        // margin-top: 1rem;
         text-align: center;
         width: 70%;
 
         @media (min-width: $breakpoint-tablet) {
-            margin-top: 5%;
+            // margin-top: 2%;
         }
     }
 

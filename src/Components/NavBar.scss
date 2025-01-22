@@ -1,12 +1,5 @@
 @import "../scss/variables.scss";
 
-.btn {
-    border: none;
-    background: none;
-    padding: 0;
-    cursor: pointer;
-}
-
 .nav-bar {
     position: relative;
     background-color: $white-line;
@@ -17,6 +10,10 @@
         align-items: center;
 
         .btn-menu-icon {
+            border: none;
+            background: none;
+            padding: 0;
+            cursor: pointer;
 
             .menu-icon {
                 width: 50px;
@@ -32,7 +29,6 @@
         }
     }
 
-
     .nav-list {
         background-color: $white-line;
         position: absolute;
@@ -42,18 +38,33 @@
         list-style-type: none;
         padding: 0;
 
-        li {
-            padding: 0.5rem;
+        @media (min-width: $breakpoint-tablet) {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
 
-            .btn-free-trial {
-                display: block;
-                text-transform: uppercase;
+        .trial-nav {
+            @media (min-width: $breakpoint-tablet) {
+                display: none;
+            }
+        }
+
+        li {
+            padding: 1%;
+
+            @media (min-width: $breakpoint-tablet) {
+                display: inline-block;
+            }
+
+            .btn-sign-in {
+                box-sizing: border-box;    
+                border: none;
+                border-radius: 30px;
                 padding: 0.5rem;
-                background-color: $pink;
-                color: $sand;
-                border-radius: 2vw;
-                border: 0.2rem solid $sand;
-                margin: auto;
+                background-color: $dark-sea-blue;
+                color: $pink;
             }
         }
     }
