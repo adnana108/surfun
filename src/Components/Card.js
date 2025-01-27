@@ -1,9 +1,10 @@
 import "./Card.scss";
 
-const Card = ({ cardDetails }) => {
+const Card = ({ hour, airTemp }) => {
     return (
         <div className="display-card">
-            {cardDetails}
+            {hour}
+            {airTemp}
         </div>
     )
 }

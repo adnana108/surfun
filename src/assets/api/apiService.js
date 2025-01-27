@@ -2,7 +2,7 @@ const API_URL_WEATHER = "https://api.stormglass.io/v2/weather/point";
 const API_WEATHER_KEY = "1c312604-ad8a-11ef-bb67-0242ac130003-1c31265e-ad8a-11ef-bb67-0242ac130003";
 const API_URL_LOCATION = "http://api.openweathermap.org/geo/1.0/direct";
 const API_LOCATION_KEY = "f2993d5c0a59b16c71a11d26c09e9791";
-const params = 'waveHeight';
+const params = 'waveHeight,airTemperature';
 // ,airTemperature,cloudCover,currentDirection,currentSpeed,precipitation,swellDirection,waterTemperature';
 
 const getWeather = async (locationName) => {

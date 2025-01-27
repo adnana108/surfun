@@ -2,11 +2,18 @@ import "./resultPage.scss";
 import Card from "../Components/Card";
 
 function ResultPage({ conditions }) {
+    const dayHours = [];
+
+    for (let i = 0; i < 24; i = i + 2) {
+        dayHours.push(conditions.hours[i])
+    }
+
+
     return (
         <div className="resultPage">
-            <div>
-                <Card cardDetails={conditions.hours[0].time} />
-            </div>
+                {dayHours.map((hour, index) => (
+                    <Card key={index} hour={hour.time} airTemp = {hour.airTemperature.noaa} />
+                ))}
         </div>
     )
 }

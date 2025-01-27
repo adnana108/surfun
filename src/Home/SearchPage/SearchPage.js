@@ -14,7 +14,7 @@ const SearchPage = () => {
         setConditions(weatherData);
         setLocation(locationName);
         setIsLoaded(true);
-
+        console.log(conditions);
     }
 
     return (
